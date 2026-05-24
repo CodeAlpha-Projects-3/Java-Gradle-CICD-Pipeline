@@ -1,19 +1,14 @@
-# Java Application Automation with Gradle
+# ⚙️ Enterprise Java Build Automation & Continuous Integration Pipeline (Task 3)
 
-## Project Overview
-This project demonstrates build automation and dependency management for a Java application using Gradle. It integrates a CI/CD pipeline to streamline the development lifecycle.
+An advanced, production-grade DevOps implementation focusing on lifecycle automation, dependency governance, and continuous integration (CI). This architecture seamlessly bridges application development with automated operations using an enterprise Jenkins orchestration grid.
 
-## Tech Stack
-- **Build Tool:** Gradle 8.7
-- **Language:** Java 21
-- **Testing:** JUnit Jupiter (JUnit 5)
-- **CI/CD:** Jenkins Pipeline
+---
 
-## Automation Steps
-1. **Dependency Management:** All libraries are managed in `app/build.gradle`.
-2. **Build Automation:** Controlled via `./gradlew build`.
-3. **CI/CD:** Automated via `Jenkinsfile` for continuous integration.
+## 📊 CI/CD Automation Flow Architecture
 
-## Verification
-To run the build locally:
-./gradlew build
+```text
+ [ Developer Commit ] ➡️ [ Source Control (Git) ] ➡️ [ Jenkins Automation Trigger ]
+                                                               │
+     ┌───────────────────────┬─────────────────────────────────┴──────────────────┐
+     ▼                       ▼                                 ▼                  ▼
+[ Environment Init ] ➡️ [ Dependency Resolution ] ➡️ [ Automated Testing (JUnit 5) ] ➡️ [ Artifact Compilation ]
